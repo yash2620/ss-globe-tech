@@ -1,61 +1,85 @@
-import React from 'react';
+import ScrollAnimation from '@/components/ScrollAnimation';
+
+const categories = [
+  {
+    id: 'forging',
+    title: 'Forging & Machining',
+    items: ['High-quality gears', 'Shafts and axles', 'Earth Mining hydraulic parts', 'Custom forging solutions'],
+  },
+  {
+    id: 'hpdc',
+    title: 'HPDC Auto Components & Light Fixtures',
+    items: ['Aluminium Housing', 'EV components', 'Die-cast auto parts', 'LED lighting fixtures'],
+  },
+  {
+    id: 'shafts',
+    title: 'Special Forge Long Shafts',
+    items: ['Customer-designed forge long shafts', 'CNC/VMC precision machining', 'Gun Drill Process (ID 5mm to 32mm)', 'Length up to 1000mm'],
+  },
+  {
+    id: 'casting',
+    title: 'CI and SG Casting',
+    items: ['Cast Iron components', 'Spheroidal Graphite iron parts', 'Durable industrial castings', 'Custom specifications'],
+  },
+  {
+    id: 'pins',
+    title: 'Ground Pins and Shafts',
+    items: ['Precision hardened pins', 'Ground shafts', 'Industrial application components'],
+  },
+  {
+    id: 'material',
+    title: 'Industrial Material Handling',
+    items: ['Conveyor systems', 'Material handling equipment', 'Factory automation solutions'],
+  },
+  {
+    id: 'packaging',
+    title: 'Packaging Solutions',
+    items: ['Industrial-grade packaging', 'Heavy engineering part packaging', 'Export-ready crating'],
+  },
+  {
+    id: 'gauges',
+    title: 'Special Gauges, Fixtures & Leak Testing',
+    items: ['Custom precision tools', 'Testing fixtures', 'Leak testing machines', 'Quality assurance equipment'],
+  },
+  {
+    id: 'it',
+    title: 'SchematicPro IT Services',
+    items: ['Professional electrical schematics', 'IEC and IEEE compliant CAD drawings', 'Automotive, Locomotive, Marine sectors'],
+  },
+];
 
 export default function Products() {
   return (
-    <section className="section bg-light">
-      <div className="container">
-        <h1 className="hero-title text-center" style={{color: 'var(--primary-color)'}}>Our Products & Services</h1>
-        <p className="text-center text-muted mb-5" style={{maxWidth: '800px', margin: '0 auto', marginBottom: '3rem'}}>
-          We specialize in exporting a wide range of high-quality engineering products. With a focus on durability and performance, our products are sourced to meet diverse industrial needs worldwide.
-        </p>
+    <>
+      <section className="page-header">
+        <div className="container">
+          <ScrollAnimation>
+            <h1>Our Products &amp; Services</h1>
+            <p>High-quality engineering solutions and IT services for global industries.</p>
+          </ScrollAnimation>
+        </div>
+      </section>
 
-        <div className="grid-3">
-          <div className="card">
-            <h3>Forging Machining</h3>
-            <p>High-quality gears, shafts, and Earth Mining hydraulic parts engineered for reliability.</p>
-          </div>
-          
-          <div className="card">
-            <h3>HPDC Auto Components & Light Fixtures</h3>
-            <p>Casting machining including Aluminium Housing and EV parts for the modern automotive industry.</p>
-          </div>
-          
-          <div className="card">
-            <h3>Special Forge Long Shafts</h3>
-            <p>Customer design forge long shafts featuring CNC/VMC and Gun Drill Processes (ID 5mm to 32mm, Length up to 1000mm).</p>
-          </div>
-          
-          <div className="card">
-            <h3>CI and SG Casting</h3>
-            <p>Durable Cast Iron and Spheroidal Graphite iron components designed for robust performance.</p>
-          </div>
-
-          <div className="card">
-            <h3>Ground Pins and Shafts</h3>
-            <p>Precision hardened and ground pins manufactured for exacting industrial applications.</p>
-          </div>
-          
-          <div className="card">
-            <h3>Industrial Material Handling</h3>
-            <p>Comprehensive material handling solutions to streamline your factory operations.</p>
-          </div>
-          
-          <div className="card">
-            <h3>Packaging Solutions</h3>
-            <p>Secure, industrial-grade packaging solutions tailored to protect heavy engineering parts.</p>
-          </div>
-          
-          <div className="card">
-            <h3>Special Gauges, Fixtures & Leak Testing</h3>
-            <p>Custom precision tools, fixtures, and leak testing machines for quality assurance.</p>
-          </div>
-
-          <div className="card bg-dark text-white" style={{backgroundColor: 'var(--primary-color)', color: 'white'}}>
-            <h3 style={{color: 'var(--secondary-color)'}}>SchematicPro IT Services</h3>
-            <p style={{color: '#ddd'}}>Professional electrical schematic services. Clean, precise, and standards-compliant CAD drawings for Automotive, Locomotive, and Marine sectors.</p>
+      <section className="section">
+        <div className="container">
+          <div className="grid-3">
+            {categories.map((cat) => (
+              <ScrollAnimation key={cat.id}>
+                <div id={cat.id} className="card" style={{ scrollMarginTop: '100px' }}>
+                  <h3 style={{ color: 'var(--secondary)' }}>{cat.title}</h3>
+                  <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {cat.items.map((item) => (
+                      <li key={item} style={{ padding: '0.4rem 0', color: 'var(--text-light)', borderBottom: '1px solid #f0f0f0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <span style={{ color: 'var(--secondary)' }}>&#10003;</span> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollAnimation>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

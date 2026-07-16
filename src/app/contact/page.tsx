@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
+import ScrollAnimation from '@/components/ScrollAnimation';
 
 const SERVICE_OPTIONS = [
   'Select a service',
@@ -48,101 +49,139 @@ export default function Contact() {
   };
 
   return (
-    <section className="section bg-light">
-      <div className="container">
-        <h1 className="hero-title text-center" style={{color: 'var(--primary-color)'}}>Contact Us</h1>
-        <p className="text-center text-muted mb-5" style={{maxWidth: '800px', margin: '0 auto', marginBottom: '3rem'}}>
-          We are a leading international company in the world. Get in touch with our global network across India, USA, Australia, Canada, and Dubai.
-        </p>
+    <>
+      <section className="page-header">
+        <div className="container">
+          <ScrollAnimation>
+            <h1>Contact Us</h1>
+            <p>Get in touch with our global network across India, USA, Australia, Canada, and Dubai.</p>
+          </ScrollAnimation>
+        </div>
+      </section>
 
-        <div className="two-col mt-4">
-          <div className="col">
-            <h2 className="text-gold">Head Office</h2>
-            <div style={{marginBottom: '1.5rem'}}>
-              <strong>India (Pune)</strong><br />
-              K-Town, A1-802. Kiwale, Ravet.<br />
-              Pune, Pin code - 411020.<br />
-              <strong>Phone:</strong> +91 9767644980<br />
-              <strong>Email:</strong> info@ssglobetech.com / service@ssglobetech.com
-            </div>
-            
-            <h2 className="text-gold mt-4">Global Network</h2>
-            <div style={{marginBottom: '1rem'}}>
-              <strong>USA (California)</strong><br />
-              10454, Sterling Blvd, Cupertino, CA 95014.
-            </div>
-            <div style={{marginBottom: '1rem'}}>
-              <strong>Australia (NSW)</strong><br />
-              30A Wolseley Street, Fairfield, NSW 2165.
-            </div>
-            <div style={{marginBottom: '1rem'}}>
-              <strong>Canada (Ontario)</strong><br />
-              1505-2910 Highway 7, Concord, Ontario L4K0H8.
-            </div>
-            <div style={{marginBottom: '1rem'}}>
-              <strong>Dubai (Sharjah)</strong><br />
-              244, Burj 2000 Damas building, Al Ghuwair, Sharjah.
-            </div>
-            <div style={{marginBottom: '1rem'}}>
-              <strong>India (Gujarat)</strong><br />
-              Plot No - 906, BOL GIDC, Village - Bol, Tal - Sanand, Ahmedabad.
-            </div>
-          </div>
-          
-          <div className="col">
-            <div className="card" style={{boxShadow: '0 10px 30px rgba(0,0,0,0.1)'}}>
-              <h2 className="text-gold" style={{marginBottom: '2rem'}}>Send an Inquiry</h2>
+      <section className="section">
+        <div className="container">
+          <div className="two-col">
+            <div className="col">
+              <ScrollAnimation>
+                <h2 className="text-gold">Head Office</h2>
+                <div style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
+                  <strong>India (Pune)</strong><br />
+                  K-Town, A1-802. Kiwale, Ravet.<br />
+                  Pune, Pin code - 411020.<br />
+                  <strong>Phone:</strong> +91 9767644980<br />
+                  <strong>Email:</strong> info@ssglobetech.com / service@ssglobetech.com
+                </div>
 
-              {status === 'success' && (
-                <div style={{padding: '1rem', background: '#d4edda', color: '#155724', borderRadius: '4px', marginBottom: '1rem'}}>
-                  Thank you! Your message has been received. We&rsquo;ll get back to you shortly.
-                </div>
-              )}
+                <h2 className="text-gold" style={{ marginTop: '2rem' }}>Global Network</h2>
+                {[
+                  { name: 'USA (California)', addr: '10454, Sterling Blvd, Cupertino, CA 95014.' },
+                  { name: 'Australia (NSW)', addr: '30A Wolseley Street, Fairfield, NSW 2165.' },
+                  { name: 'Canada (Ontario)', addr: '1505-2910 Highway 7, Concord, Ontario L4K0H8.' },
+                  { name: 'Dubai (Sharjah)', addr: '244, Burj 2000 Damas building, Al Ghuwair, Sharjah.' },
+                  { name: 'India (Gujarat)', addr: 'Plot No - 906, BOL GIDC, Village - Bol, Tal - Sanand, Ahmedabad.' },
+                ].map((loc) => (
+                  <div key={loc.name} style={{ marginBottom: '0.8rem', lineHeight: '1.6' }}>
+                    <strong>{loc.name}</strong><br />
+                    <span style={{ color: 'var(--text-light)', fontSize: '0.9rem' }}>{loc.addr}</span>
+                  </div>
+                ))}
+              </ScrollAnimation>
+            </div>
 
-              {status === 'error' && (
-                <div style={{padding: '1rem', background: '#f8d7da', color: '#721c24', borderRadius: '4px', marginBottom: '1rem'}}>
-                  {errorMsg}
-                </div>
-              )}
+            <div className="col">
+              <ScrollAnimation>
+                <div className="card" style={{ boxShadow: 'var(--shadow-lg)' }}>
+                  <h2 className="text-gold" style={{ marginBottom: '2rem' }}>Send an Inquiry</h2>
 
-              <form onSubmit={handleSubmit}>
-                <div style={{marginBottom: '1rem'}}>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: 600}}>Name *</label>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} required
-                    style={{width: '100%', padding: '0.75rem', borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: '#ddd'}} placeholder="Your Full Name" />
-                </div>
-                <div style={{marginBottom: '1rem'}}>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: 600}}>Email *</label>
-                  <input type="email" name="email" value={form.email} onChange={handleChange} required
-                    style={{width: '100%', padding: '0.75rem', borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: '#ddd'}} placeholder="Your Email Address" />
-                </div>
-                <div style={{marginBottom: '1rem'}}>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: 600}}>Phone</label>
-                  <input type="tel" name="phone" value={form.phone} onChange={handleChange}
-                    style={{width: '100%', padding: '0.75rem', borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: '#ddd'}} placeholder="Your Phone Number" />
-                </div>
-                <div style={{marginBottom: '1rem'}}>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: 600}}>Service Interest</label>
-                  <select name="subject" value={form.subject} onChange={handleChange}
-                    style={{width: '100%', padding: '0.75rem', borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: '#ddd', background: '#fff'}}>
-                    {SERVICE_OPTIONS.map(opt => (
-                      <option key={opt} value={opt === 'Select a service' ? '' : opt}>{opt}</option>
+                  {status === 'success' && (
+                    <div style={{ padding: '1rem', background: '#d4edda', color: '#155724', borderRadius: 'var(--radius)', marginBottom: '1rem' }}>
+                      Thank you! Your message has been received. We&rsquo;ll get back to you shortly.
+                    </div>
+                  )}
+
+                  {status === 'error' && (
+                    <div style={{ padding: '1rem', background: '#f8d7da', color: '#721c24', borderRadius: 'var(--radius)', marginBottom: '1rem' }}>
+                      {errorMsg}
+                    </div>
+                  )}
+
+                  <form onSubmit={handleSubmit}>
+                    {[
+                      { label: 'Name *', name: 'name', type: 'text', placeholder: 'Your Full Name', required: true },
+                      { label: 'Email *', name: 'email', type: 'email', placeholder: 'Your Email Address', required: true },
+                      { label: 'Phone', name: 'phone', type: 'tel', placeholder: 'Your Phone Number', required: false },
+                    ].map((f) => (
+                      <div key={f.name} style={{ marginBottom: '1rem' }}>
+                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600, fontSize: '0.9rem' }}>{f.label}</label>
+                        <input
+                          type={f.type}
+                          name={f.name}
+                          value={(form as any)[f.name]}
+                          onChange={handleChange}
+                          required={f.required}
+                          style={{
+                            width: '100%', padding: '0.8rem 1rem', borderRadius: 'var(--radius)',
+                            border: '1px solid #ddd', fontSize: '0.95rem', transition: 'border-color 0.3s',
+                          }}
+                          placeholder={f.placeholder}
+                          onFocus={(e) => e.target.style.borderColor = 'var(--secondary)'}
+                          onBlur={(e) => e.target.style.borderColor = '#ddd'}
+                        />
+                      </div>
                     ))}
-                  </select>
+
+                    <div style={{ marginBottom: '1rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600, fontSize: '0.9rem' }}>Service Interest</label>
+                      <select
+                        name="subject"
+                        value={form.subject}
+                        onChange={handleChange}
+                        style={{
+                          width: '100%', padding: '0.8rem 1rem', borderRadius: 'var(--radius)',
+                          border: '1px solid #ddd', background: '#fff', fontSize: '0.95rem',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {SERVICE_OPTIONS.map(opt => (
+                          <option key={opt} value={opt === 'Select a service' ? '' : opt}>{opt}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div style={{ marginBottom: '1.5rem' }}>
+                      <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600, fontSize: '0.9rem' }}>Message *</label>
+                      <textarea
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        required
+                        rows={5}
+                        style={{
+                          width: '100%', padding: '0.8rem 1rem', borderRadius: 'var(--radius)',
+                          border: '1px solid #ddd', fontSize: '0.95rem', resize: 'vertical',
+                        }}
+                        placeholder="Tell us about your requirements..."
+                        onFocus={(e) => e.target.style.borderColor = 'var(--secondary)'}
+                        onBlur={(e) => e.target.style.borderColor = '#ddd'}
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={status === 'loading'}
+                      className="btn-primary"
+                      style={{ width: '100%', opacity: status === 'loading' ? 0.7 : 1, textAlign: 'center' }}
+                    >
+                      {status === 'loading' ? 'Sending...' : 'Send Message'}
+                    </button>
+                  </form>
                 </div>
-                <div style={{marginBottom: '1rem'}}>
-                  <label style={{display: 'block', marginBottom: '0.5rem', fontWeight: 600}}>Message *</label>
-                  <textarea name="message" value={form.message} onChange={handleChange} required rows={5}
-                    style={{width: '100%', padding: '0.75rem', borderRadius: '4px', borderWidth: '1px', borderStyle: 'solid', borderColor: '#ddd'}} placeholder="Tell us about your requirements..."></textarea>
-                </div>
-                <button type="submit" disabled={status === 'loading'} className="btn-primary" style={{width: '100%', marginTop: '1rem', opacity: status === 'loading' ? 0.7 : 1}}>
-                  {status === 'loading' ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
+              </ScrollAnimation>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
