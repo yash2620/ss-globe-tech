@@ -2,20 +2,23 @@
 import Link from 'next/link';
 import ScrollAnimation from '@/components/ScrollAnimation';
 
+const BASE = '/images/products/SERVICE_13_engineering_awareness';
+const img = (name: string) => `${BASE}/${encodeURIComponent(name)}`;
+
 const services = [
   {
     id: 'gdt',
     title: 'GD&T (Geometric Dimensioning & Tolerancing)',
     desc: 'GD&T is a globally accepted engineering language defined by ASME Y14.5 and ISO GPS standards. It is used to clearly define the allowable variation in the geometry of manufactured parts, ensuring interchangeability, functionality, and consistent quality.',
-    image: '/images/products/SERVICE_13_engineering_awareness/1. GD&T (Geometric Dimensioning & Tolerancing).png',
+    image: img('1. GD&T (Geometric Dimensioning & Tolerancing).png'),
   },
   {
     id: 'apqp',
     title: 'APQP (Advanced Product Quality Planning)',
     desc: 'APQP is a structured product quality planning methodology developed by the automotive industry (AIAG) to ensure customer requirements are met throughout product development and production.',
     images: [
-      '/images/products/SERVICE_13_engineering_awareness/2. APQP (Advanced Product Quality Planning)-1.png',
-      '/images/products/SERVICE_13_engineering_awareness/2. APQP (Advanced Product Quality Planning-2.png',
+      img('2. APQP (Advanced Product Quality Planning)-1.png'),
+      img('2. APQP (Advanced Product Quality Planning-2.png'),
     ],
   },
   {
@@ -23,8 +26,8 @@ const services = [
     title: 'PPAP (Production Part Approval Process)',
     desc: 'PPAP is a standardized process in the automotive and manufacturing industries to validate that production parts meet all customer engineering design and specification requirements. It ensures supplier manufacturing processes are capable of producing quality parts consistently.',
     images: [
-      '/images/products/SERVICE_13_engineering_awareness/3. PPAP (Production Part Approval Process).png',
-      '/images/products/SERVICE_13_engineering_awareness/3. PPAP (Production Part Approval Process)-1.png',
+      img('3. PPAP (Production Part Approval Process).png'),
+      img('3. PPAP (Production Part Approval Process)-1.png'),
     ],
   },
 ];

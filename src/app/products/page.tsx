@@ -2,56 +2,19 @@ import Link from 'next/link';
 import ScrollAnimation from '@/components/ScrollAnimation';
 
 const categories = [
-  {
-    id: 'forging',
-    title: 'Forging & Machining',
-    items: ['High-quality gears', 'Shafts and axles', 'Earth Mining hydraulic parts', 'Custom forging solutions'],
-    link: '/products/forged-machined',
-  },
-  {
-    id: 'hpdc',
-    title: 'HPDC Auto Components & Light Fixtures',
-    items: ['Aluminium Housing', 'EV components', 'Die-cast auto parts', 'LED lighting fixtures'],
-    link: '/products/automotive-housings',
-  },
-  {
-    id: 'shafts',
-    title: 'Special Forge Long Shafts',
-    items: ['Customer-designed forge long shafts', 'CNC/VMC precision machining', 'Gun Drill Process (ID 5mm to 32mm)', 'Length up to 1000mm'],
-  },
-  {
-    id: 'casting',
-    title: 'CI and SG Casting',
-    items: ['Cast Iron components', 'Spheroidal Graphite iron parts', 'Durable industrial castings', 'Custom specifications'],
-    link: '/products/cast-iron-components',
-  },
-  {
-    id: 'pins',
-    title: 'Ground Pins and Shafts',
-    items: ['Precision hardened pins', 'Ground shafts', 'Industrial application components'],
-    link: '/products/hardened-ground-parts',
-  },
-  {
-    id: 'material',
-    title: 'Industrial Material Handling',
-    items: ['Conveyor systems', 'Material handling equipment', 'Factory automation solutions'],
-  },
-  {
-    id: 'packaging',
-    title: 'Packaging Solutions',
-    items: ['Industrial-grade packaging', 'Heavy engineering part packaging', 'Export-ready crating'],
-  },
-  {
-    id: 'gauges',
-    title: 'Special Gauges, Fixtures & Leak Testing',
-    items: ['Custom precision tools', 'Testing fixtures', 'Leak testing machines', 'Quality assurance equipment'],
-  },
-  {
-    id: 'it',
-    title: 'SchematicPro IT Services',
-    items: ['CAD Conversion & Digitization', 'Schematic Modification & Revision Management', 'As-Built Documentation & Redline Integration'],
-    link: '/products/schematic',
-  },
+  { id: 'forging', title: 'Forged & Machined Components', items: ['High-quality gears', 'Shafts and axles', 'Earth Mining hydraulic parts', 'Custom forging solutions'], link: '/products/forging-machining' },
+  { id: 'hpdc', title: 'Automotive Components & Housings', items: ['Aluminium Housing', 'EV components', 'Die-cast auto parts', 'LED lighting fixtures'], link: '/products/hpdc-auto-components' },
+  { id: 'shafts', title: 'High Precision Long Forge Machine Shafts', items: ['Customer-designed forge long shafts', 'CNC/VMC precision machining', 'Gun Drill Process (ID 5mm to 32mm)', 'Length up to 1000mm'], link: '/products/high-precision-shafts' },
+  { id: 'casting', title: 'Gray Cast Iron & Ductile Iron Components', items: ['Cast Iron components', 'Spheroidal Graphite iron parts', 'Durable industrial castings', 'Custom specifications'], link: '/products/gray-cast-iron' },
+  { id: 'pins', title: 'Hardened & Ground Precision Parts', items: ['Precision hardened pins', 'Ground shafts', 'Industrial application components'], link: '/products/hardened-ground-pins' },
+  { id: 'material', title: 'Industrial Material Handling', items: ['Conveyor systems', 'Material handling equipment', 'Factory automation solutions'], link: '/products/industrial-material-handling' },
+  { id: 'packaging', title: 'Packaging Solutions', items: ['Industrial-grade packaging', 'Heavy engineering part packaging', 'Export-ready crating'], link: '/products/packaging-solutions' },
+  { id: 'gauges', title: 'Special Gauges, Fixtures & Leak Testing', items: ['Custom precision tools', 'Testing fixtures', 'Leak testing machines', 'Quality assurance equipment'], link: '/products/special-gauges-fixtures' },
+  { id: 'injection', title: 'Injection Molding Products & Moulds', items: ['Injection molded components', 'Precision moulds', 'Plastic parts manufacturing'], link: '/products/injection-molding' },
+  { id: 'custom', title: 'Custom Design Products', items: ['Bearing housings', 'Custom brackets & supports', 'Machined components per drawing'], link: '/products/custom-design-products' },
+  { id: 'schematic', title: 'SchematicPro IT Services', items: ['CAD Conversion & Digitization', 'Schematic Modification & Revision Management', 'As-Built Documentation & Redline Integration'], link: '/products/schematic-design' },
+  { id: 'publication', title: 'Technical Publication Services', items: ['Technical documentation', 'User manuals', 'Illustration & publishing'], link: '/products/technical-publication' },
+  { id: 'awareness', title: 'Engineering GD & T, APQP & PPAP', items: ['GD&T implementation', 'APQP documentation', 'PPAP submissions'], link: '/products/engineering-awareness' },
 ];
 
 export default function Products() {
