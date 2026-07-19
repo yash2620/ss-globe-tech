@@ -21,6 +21,16 @@ export default function GlobalNetwork() {
         </div>
       </section>
 
+      <section className="global-network-map">
+        <div className="container">
+          <ScrollAnimation>
+            <div className="network-map-wrapper">
+              <img src="/images/global-network-1.png" alt="Global Network Map" className="network-map-img" />
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <div className="grid-3">

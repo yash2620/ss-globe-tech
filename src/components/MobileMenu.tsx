@@ -4,21 +4,26 @@ import Link from 'next/link';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
   {
     label: 'Products & Services',
     children: [
-      { label: 'Forging & Machining', href: '/products#forging' },
-      { label: 'HPDC Auto Components', href: '/products#hpdc' },
-      { label: 'Special Forge Shafts', href: '/products#shafts' },
-      { label: 'CI & SG Casting', href: '/products#casting' },
-      { label: 'Ground Pins & Shafts', href: '/products#pins' },
-      { label: 'Industrial Material Handling', href: '/products#material' },
-      { label: 'Packaging Solutions', href: '/products#packaging' },
-      { label: 'IT Services', href: '/products#it' },
+      { label: 'Forging Machining', href: '/products/forging-machining' },
+      { label: 'HPDC Auto Components', href: '/products/hpdc-auto-components' },
+      { label: 'Gray Cast Iron', href: '/products/gray-cast-iron' },
+      { label: 'Hardened Ground Pins', href: '/products/hardened-ground-pins' },
+      { label: 'Industrial Material Handling', href: '/products/industrial-material-handling' },
+      { label: 'Packaging Solutions', href: '/products/packaging-solutions' },
+      { label: 'Special Gauges & Fixtures', href: '/products/special-gauges-fixtures' },
+      { label: 'Injection Molding', href: '/products/injection-molding' },
+      { label: 'Custom Design Products', href: '/products/custom-design-products' },
+      { label: 'High Precision Shafts', href: '/products/high-precision-shafts' },
+      { label: 'Schematic Design Services', href: '/products/schematic-design' },
+      { label: 'Technical Publication', href: '/products/technical-publication' },
+      { label: 'Engineering Awareness', href: '/products/engineering-awareness' },
     ],
   },
   { label: 'Global Network', href: '/network' },
+  { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
 

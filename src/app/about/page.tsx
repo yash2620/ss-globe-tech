@@ -14,50 +14,108 @@ export default function About() {
 
       <section className="section">
         <div className="container">
-          <div className="two-col">
-            <ScrollAnimation className="col">
-              <h2 className="text-gold">Mission</h2>
-              <p>At SS Globe Tech, our mission is to connect global buyers with trusted manufacturers through reliable sourcing, high-quality engineering solutions, and seamless international trade services. We are committed to excellence, innovation, and ethical business practices that create lasting value for our clients and partners worldwide.</p>
+          <ScrollAnimation>
+            <h2 className="text-gold" style={{ fontSize: '2rem', marginBottom: '1rem' }}>ABOUT SS GLOBETECH SOLUTIONS</h2>
+            <div style={{ border: '1px solid #000', padding: '1.5rem', marginBottom: '3rem', background: '#fff', display: 'flex', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+              <div style={{ flex: '1 1 500px' }}>
+                <p style={{ lineHeight: '1.8', fontSize: '1.05rem', color: '#1f2937', margin: 0 }}>
+                  <strong>Welcome to SS Globe Tech Solutions</strong>, a distinguished Engineering Products and Services company based in India. We are committed to delivering world-class engineering solutions and building long-term partnerships through quality, reliability, and innovation. SS Globe Tech Solutions specializes in the sourcing and supply of precision-engineered products, industrial components, custom manufacturing solutions, and value-added engineering services. Our expertise, professional approach, and unwavering commitment to excellence enable us to meet the evolving requirements of customers across international markets. Driven by the principles of quality, integrity, innovation, and customer satisfaction, we deliver products and services that comply with global standards while ensuring timely delivery and competitive value. At SS Globe Tech Solutions, every project reflects our dedication to engineering excellence and our vision of connecting industries worldwide through reliable products and professional services.
+                </p>
+              </div>
+              <div style={{ width: '250px', flexShrink: 0, textAlign: 'center', margin: '0 auto' }}>
+                <img
+                  src="/images/sachin.jpeg"
+                  alt="Founder Sachin G.S."
+                  style={{ width: '100%', height: '300px', objectFit: 'cover', objectPosition: 'top', borderRadius: '8px', border: '4px solid #d4af37', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
+                />
+                <h3 style={{ marginTop: '1rem', marginBottom: '0.2rem', fontSize: '1.2rem', color: '#1e3a8a' }}>Sachin G.S.</h3>
+                <p style={{ color: '#4b5563', fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Founder & CEO</p>
+              </div>
+            </div>
+          </ScrollAnimation>
 
-              <h2 className="text-gold" style={{ marginTop: '2rem' }}>Vision</h2>
-              <p>To be a leading global sourcing and export partner for engineering products, connecting manufacturers and buyers worldwide through quality, reliability, and innovation. We aim to drive sustainable growth and long-term success for our clients in the global marketplace.</p>
+          <ScrollAnimation>
+            <div style={{ background: '#93c5fd', padding: '0.75rem', marginBottom: '2rem' }}>
+              <h2 style={{ margin: 0, color: '#1e3a8a', fontSize: '1.5rem' }}>ENGINEERING PRODUCTS AND SERVICES</h2>
+            </div>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {[
+                { 
+                  title: 'MISSION', 
+                  img: 'Globe-1.png', 
+                  text: "Our mission is to empower global industries by providing reliable engineering products, strategic sourcing solutions, and seamless export services with uncompromising quality and professionalism. Through innovation, technical expertise, and ethical business practices, we foster long-term partnerships, enhance supply chain excellence, and deliver sustainable value to customers across the world." 
+                },
+                { 
+                  title: 'VISION', 
+                  img: 'globe-2.png', 
+                  text: "Our vision is to bridge global manufacturers and customers through trusted sourcing, precision engineering solutions, and seamless international trade. By embracing innovation, integrity, and operational excellence, we aim to become a benchmark for quality, reliability, and sustainable business growth in the global marketplace." 
+                },
+                { 
+                  title: 'VALUES', 
+                  img: 'globe-3.png', 
+                  text: "Our core values of integrity, innovation, quality, accountability, and customer excellence drive every decision we make. By combining technical expertise with ethical business practices and a commitment to continuous improvement, SS Globe Tech Solutions delivers dependable engineering solutions and international trade services that build trust, strengthen global partnerships, and support sustainable business growth." 
+                }
+              ].map(item => (
+                <div key={item.title} style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1.5rem', border: '1px solid #000', padding: '0' }}>
+                  <div style={{ width: '150px', background: '#d5cfc1', padding: '2rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', alignSelf: 'stretch', borderRight: '1px solid #000' }}>
+                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>{item.title}</h3>
+                  </div>
+                  <div style={{ width: '220px', padding: '1rem', flexShrink: 0, margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
+                    <img src={`/images/${item.img}`} alt={item.title} style={{ width: '100%', objectFit: 'contain' }} />
+                  </div>
+                  <div style={{ flex: '1 1 300px', padding: '1.5rem', borderLeft: '1px solid #000' }}>
+                    <p style={{ lineHeight: '1.6', color: '#000', margin: 0, fontWeight: '500' }}>
+                      "{item.text}"
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ScrollAnimation>
+
+          <div style={{ marginTop: '4rem' }}>
+            <ScrollAnimation>
+              <h3 style={{ background: '#d5cfc1', display: 'inline-block', padding: '0.5rem 1rem', border: '1px solid #000', marginBottom: '1.5rem' }}>
+                CORE OBJECTIVES
+              </h3>
+              <div style={{ border: '1px solid #000', padding: '1.5rem', marginBottom: '3rem' }}>
+                <ol style={{ paddingLeft: '1rem', lineHeight: '2', fontWeight: 'bold', margin: 0, listStylePosition: 'inside' }}>
+                  <li>Promote Indian Engineering in Global Market</li>
+                  <li>Expand Exports and Foreign exchange earnings</li>
+                  <li>Highlight the Quality and Reliability on Indian Engineering Products and services</li>
+                  <li>Build Long term International Partnership</li>
+                  <li>Support sustainable Growth and Job Creation</li>
+                  <li>Deliver ethical, customer-focused export solutions</li>
+                </ol>
+              </div>
             </ScrollAnimation>
-            <ScrollAnimation className="col">
-              <h2 className="text-gold">Values</h2>
-              <p>Integrity, innovation, quality, and customer focus are at the heart of our business. These values inspire us to deliver reliable sourcing and international trade solutions while building trust and long-term success for our clients worldwide.</p>
 
-              <h2 className="text-gold" style={{ marginTop: '2rem' }}>Why Choose Us?</h2>
-              <ul style={{ listStyle: 'inside', padding: '1rem 0', lineHeight: '2.2' }}>
-                <li>Unparalleled expertise and professional services.</li>
-                <li>High-quality products and complete client satisfaction.</li>
-                <li>On-time delivery and price benefits.</li>
-                <li>Certified by GST, FIEO, SEPC.</li>
-              </ul>
+            <ScrollAnimation>
+              <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#1e3a8a' }}>Why Choose Us?</h2>
+              <div style={{ border: '1px solid #000', padding: '1.5rem' }}>
+                <p style={{ lineHeight: '1.8', color: '#000', fontWeight: '500', marginBottom: '3rem' }}>
+                  We are committed to delivering engineering excellence through trusted sourcing, precision, quality assurance, and seamless export solutions. By combining technical expertise with customer-focused service and ethical business practices, we help our clients achieve operational efficiency, sustainable growth, and global competitiveness.
+                </p>
+                <div style={{ background: '#93c5fd', border: '1px solid #000', padding: '0.75rem', textAlign: 'center', fontStyle: 'italic', fontWeight: 'bold', fontSize: '1.1rem' }}>
+                  Engineering Excellence • Trusted Sourcing • Global Reach • Lasting Partnership
+                </div>
+              </div>
             </ScrollAnimation>
           </div>
         </div>
       </section>
 
-      <section className="section" style={{ background: '#f0f2f8', textAlign: 'center' }}>
+      <section className="section" style={{ background: '#f0f2f8' }}>
         <div className="container">
-          <ScrollAnimation>
-            <h2 className="section-title">Our Leadership</h2>
-            <p className="section-subtitle">Meet the founder driving SS Globe Tech&rsquo;s vision.</p>
-            <div style={{ marginTop: '2rem' }}>
-              <img
-                src="/images/sachin.jpeg"
-                alt="Sachin GS"
-                style={{ width: '220px', height: '300px', objectFit: 'cover', borderRadius: '8px', border: '4px solid var(--secondary)', boxShadow: 'var(--shadow-lg)' }}
-              />
-              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.3rem' }}>Sachin G.S.</h3>
-              <p style={{ color: 'var(--secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>Founder & CEO</p>
-              <p style={{ maxWidth: '700px', margin: '1.5rem auto', color: 'var(--text-light)', fontStyle: 'italic', fontSize: '1.1rem' }}>
-                &ldquo;SS GlobeTech is your trusted Global Sourcing Partner, connecting international buyers with reliable Indian manufacturers for engineering products, industrial components, customized parts, packaging solutions, and IT services.&rdquo;
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="office-showcase">
+            <ScrollAnimation>
+              <img src="/images/office-1.png" alt="SS Globe Tech Office" className="office-main-img" />
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
+
     </>
   );
 }

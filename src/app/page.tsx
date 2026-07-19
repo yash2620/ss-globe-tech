@@ -32,6 +32,31 @@ export default function Home() {
 
       <TrustBadges />
 
+      <section className="section" style={{ background: '#f8f9fc' }}>
+        <div className="container">
+          <div className="two-col" style={{ alignItems: 'center', gap: '3rem' }}>
+            <ScrollAnimation className="col">
+              <h2 className="text-gold" style={{ fontSize: '2.2rem', marginBottom: '0.5rem' }}>SS GLOBETECH SOLUTIONS</h2>
+              <h3 style={{ color: 'var(--primary, #1e3a8a)', fontStyle: 'italic', fontSize: '1.4rem', marginBottom: '1.5rem' }}>
+                Trusted Merchant Exporter from India
+              </h3>
+              <p style={{ marginBottom: '1rem', lineHeight: '1.7', fontSize: '1.05rem', color: '#4b5563' }}>
+                SS GlobeTech Solutions is a trusted merchant exporter specializing in the global supply of high-quality engineering products and industrial solutions. We are committed to delivering excellence through reliable sourcing, stringent quality assurance, competitive pricing, and efficient international logistics.
+              </p>
+              <p style={{ marginBottom: '1.5rem', lineHeight: '1.7', fontSize: '1.05rem', color: '#4b5563' }}>
+                Our focus on integrity, precision, and customer satisfaction enables us to build long-term partnerships with clients across global markets. By combining industry expertise with a seamless export process, we ensure that every shipment meets the highest standards of quality, compliance, and timely delivery.
+              </p>
+              <blockquote style={{ borderLeft: '4px solid var(--gold, #d4af37)', paddingLeft: '1rem', fontStyle: 'italic', fontSize: '1.2rem', color: '#1f2937', marginTop: '1.5rem' }}>
+                "Delivering Engineering Excellence. Connecting Global Markets."
+              </blockquote>
+            </ScrollAnimation>
+            <ScrollAnimation className="col">
+              <img src="/images/Homepage-1.png" alt="SS GlobeTech Solutions Overview" style={{ width: '100%', borderRadius: 'var(--radius, 8px)', boxShadow: 'var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1))' }} />
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <ScrollAnimation>
@@ -47,35 +72,19 @@ export default function Home() {
               <Link href="/about" className="link-arrow" style={{ marginTop: '1rem' }}>Learn More About Us</Link>
             </ScrollAnimation>
             <ScrollAnimation className="col">
-              <img src="/images/about.png" alt="About SS Globe Tech" style={{ width: '100%', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)' }} />
+              <img src="/images/office-1.png" alt="About SS Globe Tech Office" style={{ width: '100%', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)' }} />
             </ScrollAnimation>
           </div>
         </div>
       </section>
 
-      <section className="section" style={{ background: 'var(--white)' }}>
+      <section className="cta-section">
         <div className="container">
           <ScrollAnimation>
-            <h2 className="section-title">Our Expertise</h2>
-            <p className="section-subtitle">High-quality engineering solutions and seamless international trade services.</p>
+            <h2>Precision Engineering. Global Delivery.</h2>
+            <p style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>From forged components to IT services — we deliver quality across industries and continents.</p>
+            <Link href="/products" className="btn-primary">Explore Our Products</Link>
           </ScrollAnimation>
-          <div className="grid-3">
-            {[
-              { img: '/images/service_forging.png', title: 'Forging & Machining', desc: 'Gears, shafts, Earth Mining hydraulic parts.' },
-              { img: '/images/service_hpdc.png', title: 'Specialized Gun Drilling', desc: 'High precision long forge machine shafts with ID taper 0.1mm per 100mm.' },
-              { img: '/images/service_schematic.png', title: 'SchematicPro IT Services', desc: 'Professional electrical schematic services compliant with IEC and IEEE standards.' },
-            ].map((s) => (
-              <ScrollAnimation key={s.title}>
-                <div className="service-card">
-                  <img src={s.img} alt={s.title} className="service-card-img" />
-                  <div className="service-card-body">
-                    <h3>{s.title}</h3>
-                    <p>{s.desc}</p>
-                  </div>
-                </div>
-              </ScrollAnimation>
-            ))}
-          </div>
         </div>
       </section>
 

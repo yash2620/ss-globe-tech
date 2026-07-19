@@ -73,6 +73,61 @@ export default function Contact() {
                   <strong>Email:</strong> info@ssglobetech.com / service@ssglobetech.com
                 </div>
 
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1rem', marginBottom: '0.8rem', color: 'var(--primary)' }}>Follow Us</h3>
+                  <div style={{ display: 'flex', gap: '0.75rem' }}>
+                    {[
+                      { name: 'Facebook', img: '/images/facebook.png' },
+                      { name: 'Instagram', img: '/images/instagram.png' },
+                      { name: 'LinkedIn', img: '/images/linkedin.png' },
+                      { name: 'WhatsApp', img: '/images/whatsapp.png' },
+                      { name: 'Pinterest', img: '/images/pinterest.png' },
+                    ].map((social) => (
+                      <a
+                        key={social.name}
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={social.name}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: 40,
+                          height: 40,
+                          borderRadius: '50%',
+                          overflow: 'hidden',
+                          transition: 'all 0.3s ease',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = 'translateY(-3px)';
+                          e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.15)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = '';
+                          e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                        }}
+                      >
+                        <img src={social.img} alt={social.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: '2rem', borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
+                  <iframe
+                    src="https://maps.google.com/maps?q=K-Town%20A1-802%20Kiwale%20Ravet%20Pune%20411020&output=embed"
+                    width="100%"
+                    height="280"
+                    style={{ border: 0, display: 'block' }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="SS Globe Tech - Pune Office Location"
+                  />
+                </div>
+
                 <h2 className="text-gold" style={{ marginTop: '2rem' }}>Global Network</h2>
                 {[
                   { name: 'USA (California)', addr: '10454, Sterling Blvd, Cupertino, CA 95014.' },

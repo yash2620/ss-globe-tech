@@ -1,42 +1,61 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import MobileMenu from './MobileMenu';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
   {
     label: 'Products & Services',
     href: '/products',
     children: [
-      { label: 'Forging & Machining', href: '/products#forging' },
-      { label: 'HPDC Auto Components & Light Fixtures', href: '/products#hpdc' },
-      { label: 'Special Forge Long Shafts', href: '/products#shafts' },
-      { label: 'CI & SG Casting', href: '/products#casting' },
-      { label: 'Ground Pins & Shafts', href: '/products#pins' },
-      { label: 'Industrial Material Handling', href: '/products#material' },
-      { label: 'Packaging Solutions', href: '/products#packaging' },
-      { label: 'Special Gauges & Leak Testing', href: '/products#gauges' },
-      { label: 'SchematicPro IT Services', href: '/products#it' },
+      { label: 'Forging Machining', href: '/products/forging-machining' },
+      { label: 'HPDC Auto Components', href: '/products/hpdc-auto-components' },
+      { label: 'Gray Cast Iron', href: '/products/gray-cast-iron' },
+      { label: 'Hardened Ground Pins', href: '/products/hardened-ground-pins' },
+      { label: 'Industrial Material Handling', href: '/products/industrial-material-handling' },
+      { label: 'Packaging Solutions', href: '/products/packaging-solutions' },
+      { label: 'Special Gauges & Fixtures', href: '/products/special-gauges-fixtures' },
+      { label: 'Injection Molding', href: '/products/injection-molding' },
+      { label: 'Custom Design Products', href: '/products/custom-design-products' },
+      { label: 'High Precision Shafts', href: '/products/high-precision-shafts' },
+      { label: 'Schematic Design Services', href: '/products/schematic-design' },
+      { label: 'Technical Publication', href: '/products/technical-publication' },
+      { label: 'Engineering Awareness', href: '/products/engineering-awareness' },
     ],
   },
   { label: 'Global Network', href: '/network' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === '/';
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activePath, setActivePath] = useState('');
+
+  useEffect(() => {
+    setActivePath(pathname);
+  }, [pathname]);
+
+  useEffect(() => {
+    setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className={`site-header ${isHome ? 'transparent' : 'solid'}`}>
+    <header className={`site-header ${scrolled ? 'solid' : 'transparent'}`}>
       <div className="container header-inner">
         <Link href="/" className="header-logo">
+          <img src="/images/ss-globe-tech-logo.png" alt="SS Globe Tech" className="logo-img" />
           <span className="logo-text">SS Globe Tech</span>
         </Link>
 
@@ -66,7 +85,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link ${pathname === item.href ? 'active' : ''}`}
+                className={`nav-link ${activePath === item.href ? 'active' : ''}`}
               >
                 {item.label}
               </Link>
