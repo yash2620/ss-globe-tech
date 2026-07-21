@@ -121,7 +121,7 @@ export default function SchematicServices() {
       <section className="page-header">
         <div className="container">
           <ScrollAnimation>
-            <h1>SchematicPro IT Services</h1>
+            <h1>SchematicPro Engineering Services</h1>
             <p>Precision Electrical CAD — Standards-Compliant Drawings for Global Industries</p>
           </ScrollAnimation>
         </div>

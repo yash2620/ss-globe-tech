@@ -3,6 +3,7 @@ export default function TrustBadges() {
     { name: 'GST Certified', icon: '/images/GST logo.webp' },
     { name: 'Udyog Aadhar', icon: '/images/Udyog-Aadhar-Certificate.webp' },
     { name: 'ICE Certified', icon: '/images/ICE-Certificate.webp' },
+    { name: 'FIEO Registered', icon: '/images/fieo.png' },
   ];
 
   return (

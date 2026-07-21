@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'SS Globe Tech | Premier Merchant Exporter in India',
-  description: 'Passion for precision, driven by quality. Connecting international buyers with reliable Indian manufacturers for engineering products, industrial components, packaging solutions, and IT services.',
+  description: 'Passion for precision, driven by quality. Connecting international buyers with reliable Indian manufacturers for engineering products, industrial components, packaging solutions, and Engineering Services.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

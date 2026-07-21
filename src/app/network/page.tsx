@@ -1,12 +1,12 @@
 import ScrollAnimation from '@/components/ScrollAnimation';
 
 const networks = [
-  { country: 'India (Head Office)', name: 'Sachin S.', address: 'K-Town, A1-802. Kiwale, Ravet. Pune, Pin - 411020', email: 'info@ssglobetech.com' },
+  { country: 'India (Head Office)', name: 'Sachin S.', address: 'K-Town, A1-802. Kiwale, Ravet. Pune, Pin - 411020', email: 'service@ssglobetech.com' },
   { country: 'USA', name: 'Amit D.', address: '10454, Sterling Blvd, Cupertino, CA 95014', email: 'info@ssglobetech.com' },
-  { country: 'Australia', name: 'Vishal P.', address: '30A Wolseley Street, Fairfield, NSW 2165', email: 'info@ssglobetech.com' },
-  { country: 'Canada', name: 'Tushar A.', address: '1505-2910 Highway 7, Concord, Ontario, L4K0H8', email: 'info@ssglobetech.com' },
+  { country: 'Australia', name: 'Vishal P.', address: '30A Wolseley Street, Fairfield, NSW 2165', email: 'service@ssglobetech.com' },
+  { country: 'Canada', name: 'Tushar A.', address: '1505-2910 Highway 7, Concord, Ontario, L4K0H8', email: 'service@ssglobetech.com' },
   { country: 'Dubai', name: 'Mahesh Y.', address: '244, Burj 2000 Damas building, Al Ghuwair, Sharjah', email: 'info@ssglobetech.com' },
-  { country: 'India (Gujarat)', name: 'Raghavendra R.', address: 'Plot No - 906, BOL GIDC, Village - Bol, Tal - Sanand, Ahmedabad', email: 'info@ssglobetech.com' },
+  { country: 'India (Gujarat)', name: 'Raghavendra R.', address: 'Plot No - 906, BOL GIDC, Village - Bol, Tal - Sanand, Ahmedabad', email: 'service@ssglobetech.com' },
 ];
 
 export default function GlobalNetwork() {

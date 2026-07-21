@@ -5,6 +5,7 @@ export default function Footer() {
     { src: '/images/GST logo.webp', alt: 'GST Registered', title: 'GST' },
     { src: '/images/Udyog-Aadhar-Certificate.webp', alt: 'Udyog Aadhar', title: 'Udyog Aadhar' },
     { src: '/images/ICE-Certificate.webp', alt: 'ICE Certified', title: 'ICE' },
+    { src: '/images/fieo.png', alt: 'FIEO Registered', title: 'FIEO' },
   ];
 
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
             <h4>SS Globe Tech</h4>
             <p>
               Premier Merchant Exporter in India, connecting global buyers with trusted
-              manufacturers for engineering products, industrial components, and IT services.
+              manufacturers for engineering products, industrial components, and Engineering Services.
             </p>
             <div className="certifications">
               {certifications.map((cert) => (
@@ -43,7 +44,7 @@ export default function Footer() {
             <Link href="/products#hpdc">HPDC Components</Link>
             <Link href="/products#shafts">Special Shafts</Link>
             <Link href="/products#casting">CI & SG Casting</Link>
-            <Link href="/products#it">IT Services</Link>
+            <Link href="/products#it">Engineering Services</Link>
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
@@ -54,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 SS Globe Tech. All rights reserved.</p>
+          <p>{'\u00A9'} 2026 SS Globe Tech. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import StatsCounter from '@/components/StatsCounter';
 import TrustBadges from '@/components/TrustBadges';
-import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ScrollAnimation from '@/components/ScrollAnimation';
 
 export default function Home() {
@@ -17,7 +15,7 @@ export default function Home() {
                 Precision <span className="highlight">.</span> Innovation <span className="highlight">.</span> Excellence
               </h1>
               <p className="hero-subtitle">
-                Passion for precision, driven by quality. Connecting international buyers with reliable Indian manufacturers for engineering products, industrial components, packaging solutions, and IT services.
+                Passion for precision, driven by quality. Connecting international buyers with reliable Indian manufacturers for engineering products, industrial components, packaging solutions, and Engineering Services.
               </p>
               <div className="hero-actions">
                 <Link href="/products" className="btn-primary">Explore Products</Link>
@@ -28,7 +26,28 @@ export default function Home() {
         </div>
       </section>
 
-      <StatsCounter />
+      <section className="section" style={{ padding: '3rem 0', background: 'var(--white)' }}>
+        <div className="container">
+          <div className="two-col" style={{ gap: '3rem' }}>
+            <ScrollAnimation className="col">
+              <div style={{ background: '#f0f2f8', padding: '2rem', borderRadius: 'var(--radius)', height: '100%' }}>
+                <h3 style={{ fontSize: '1.3rem', color: 'var(--secondary)', marginBottom: '1rem', letterSpacing: '2px' }}>OUR MISSION</h3>
+                <p style={{ lineHeight: '1.8', color: '#4b5563', fontSize: '0.95rem', fontStyle: 'italic' }}>
+                  "Our mission is to empower global industries by providing reliable engineering products, strategic sourcing solutions, and seamless export services with uncompromising quality and professionalism. Through innovation, technical expertise, and ethical business practices, we foster long-term partnerships, enhance supply chain excellence, and deliver sustainable value to customers across the world."
+                </p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation className="col">
+              <div style={{ background: '#f0f2f8', padding: '2rem', borderRadius: 'var(--radius)', height: '100%' }}>
+                <h3 style={{ fontSize: '1.3rem', color: 'var(--secondary)', marginBottom: '1rem', letterSpacing: '2px' }}>OUR VISION</h3>
+                <p style={{ lineHeight: '1.8', color: '#4b5563', fontSize: '0.95rem', fontStyle: 'italic' }}>
+                  "Our vision is to bridge global manufacturers and customers through trusted sourcing, precision engineering solutions, and seamless international trade. By embracing innovation, integrity, and operational excellence, we aim to become a benchmark for quality, reliability, and sustainable business growth in the global marketplace."
+                </p>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
 
       <TrustBadges />
 
@@ -68,7 +87,7 @@ export default function Home() {
           <div className="two-col">
             <ScrollAnimation className="col">
               <h2 className="text-gold">Who We Are</h2>
-              <p>Operating from Pune, Maharashtra, we specialize in a diverse range of engineering products and IT services. We connect global buyers with trusted manufacturers, ensuring quality, reliability, and on-time delivery.</p>
+              <p>Operating from Pune, Maharashtra, we specialize in a diverse range of engineering products and Engineering Services. We connect global buyers with trusted manufacturers, ensuring quality, reliability, and on-time delivery.</p>
               <Link href="/about" className="link-arrow" style={{ marginTop: '1rem' }}>Learn More About Us</Link>
             </ScrollAnimation>
             <ScrollAnimation className="col">
@@ -82,13 +101,11 @@ export default function Home() {
         <div className="container">
           <ScrollAnimation>
             <h2>Precision Engineering. Global Delivery.</h2>
-            <p style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>From forged components to IT services — we deliver quality across industries and continents.</p>
+            <p style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>From forged components to Engineering Services — we deliver quality across industries and continents.</p>
             <Link href="/products" className="btn-primary">Explore Our Products</Link>
           </ScrollAnimation>
         </div>
       </section>
-
-      <TestimonialCarousel />
 
       <section className="global-network-section">
         <div className="container">

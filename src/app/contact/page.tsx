@@ -5,7 +5,7 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 
 const SERVICE_OPTIONS = [
   'Select a service',
-  'IT Services & Software Development',
+  'Engineering Services & Software Development',
   'Engineering Products & Industrial Components',
   'Packaging Solutions',
   'Import / Export Advisory',

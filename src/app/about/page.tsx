@@ -24,7 +24,7 @@ export default function About() {
               </div>
               <div style={{ width: '250px', flexShrink: 0, textAlign: 'center', margin: '0 auto' }}>
                 <img
-                  src="/images/sachin.jpeg"
+                  src="/images/sachin-crop.jpeg"
                   alt="Founder Sachin G.S."
                   style={{ width: '100%', height: '300px', objectFit: 'cover', objectPosition: 'top', borderRadius: '8px', border: '4px solid #d4af37', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
                 />
