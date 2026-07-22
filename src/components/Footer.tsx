@@ -48,10 +48,15 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
+            <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><img src="/images/india.png" alt="" style={{ width: 28, height: 20, objectFit: 'cover', borderRadius: 2 }} /><strong>India (Pune)</strong></p>
             <p>K-Town, A1-802. Kiwale, Ravet.</p>
             <p>Pune, Pin code - 411020.</p>
-            <p><strong>Phone:</strong> +91 9767644980</p>
-            <p><strong>Email:</strong> info@ssglobetech.com</p>
+            <p><strong>Phone:</strong> <a href="tel:+919767644980" className="contact-link">+91 9767644980</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@ssglobetech.com" className="contact-link">info@ssglobetech.com</a></p>
+            <a href="https://ssglobetech.com" target="_blank" rel="noopener noreferrer" className="contact-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.3rem' }}>
+              <img src="/images/globe-icon.png" alt="Globe" style={{ width: 18, height: 18 }} />
+              ssglobetech.com
+            </a>
           </div>
         </div>
         <div className="footer-bottom">

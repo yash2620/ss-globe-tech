@@ -796,7 +796,6 @@ img {
   display: block;
 }
 
-
 /* ===== GLOBAL NETWORK SECTION ===== */
 .global-network-section {
   background: linear-gradient(135deg, #0a1a3a, #122a5e);
@@ -1079,6 +1078,17 @@ img {
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* ===== CONTACT LINKS ===== */
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--secondary);
+}
+
 /* ===== ANIMATIONS ===== */
 .animate-on-scroll {
   opacity: 0;
@@ -1246,6 +1256,18 @@ img {
   color: var(--primary);
   border-color: var(--primary);
   transform: translateY(-2px);
+}
+
+/* ===== ABOUT CARDS ===== */
+.about-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.card:hover .about-card-icon {
+  transform: scale(1.2);
 }
 
 /* ===== RESPONSIVE ===== */

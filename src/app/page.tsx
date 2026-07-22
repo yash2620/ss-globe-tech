@@ -5,7 +5,7 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 export default function Home() {
   return (
     <>
-      <section className="section" style={{ background: '#f8f9fc' }}>
+      <section className="section" style={{ background: '#f8f9fc', paddingTop: '7rem' }}>
         <div className="container">
           <div className="two-col" style={{ alignItems: 'center', gap: '3rem' }}>
             <ScrollAnimation className="col">
@@ -29,41 +29,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section" style={{ padding: '4rem 0', background: 'linear-gradient(135deg, #f0f2f8 0%, #e8ecf5 100%)' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <ScrollAnimation>
-            <div className="mv-stacked-card">
-              <div className="mv-stacked-img">
-                <img src="/images/Globe-1.png" alt="Our Mission" />
-              </div>
-              <div className="mv-stacked-body">
-                <span className="mv-stacked-badge">Our Mission</span>
-                <p className="mv-stacked-text">
-                  "Our mission is to empower global industries by providing reliable engineering products, strategic sourcing solutions, and seamless export services with uncompromising quality and professionalism. Through innovation, technical expertise, and ethical business practices, we foster long-term partnerships, enhance supply chain excellence, and deliver sustainable value to customers across the world."
-                </p>
-              </div>
-            </div>
-          </ScrollAnimation>
-          <div style={{ height: '2rem' }} />
-          <ScrollAnimation>
-            <div className="mv-stacked-card">
-              <div className="mv-stacked-img">
-                <img src="/images/globe-2.png" alt="Our Vision" />
-              </div>
-              <div className="mv-stacked-body">
-                <span className="mv-stacked-badge">Our Vision</span>
-                <p className="mv-stacked-text">
-                  "Our vision is to bridge global manufacturers and customers through trusted sourcing, precision engineering solutions, and seamless international trade. By embracing innovation, integrity, and operational excellence, we aim to become a benchmark for quality, reliability, and sustainable business growth in the global marketplace."
-                </p>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
       <TrustBadges />
-
-
 
       <section className="section">
         <div className="container">
@@ -73,16 +39,15 @@ export default function Home() {
               We are the trusted Merchant Exporter in India, excelling in global trade and ensuring seamless exports of diverse products.
             </p>
           </ScrollAnimation>
-          <div className="two-col">
-            <ScrollAnimation className="col">
+          <ScrollAnimation>
+            <div className="card" style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem' }}>
               <h2 className="text-gold">Who We Are</h2>
-              <p>Operating from Pune, Maharashtra, we specialize in a diverse range of engineering products and Engineering Services. We connect global buyers with trusted manufacturers, ensuring quality, reliability, and on-time delivery.</p>
-              <Link href="/about" className="link-arrow" style={{ marginTop: '1rem' }}>Learn More About Us</Link>
-            </ScrollAnimation>
-            <ScrollAnimation className="col">
-              <img src="/images/office-1.png" alt="About SS Globe Tech Office" style={{ width: '100%', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)' }} />
-            </ScrollAnimation>
-          </div>
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--text)', marginBottom: '1.5rem' }}>
+                Operating from Pune, Maharashtra, we specialize in a diverse range of engineering products and Engineering Services. We connect global buyers with trusted manufacturers, ensuring quality, reliability, and on-time delivery.
+              </p>
+              <Link href="/about" className="link-arrow">Learn More About Us</Link>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 

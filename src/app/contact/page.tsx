@@ -75,11 +75,15 @@ export default function Contact() {
               <ScrollAnimation>
                 <h2 className="text-gold">Head Office</h2>
                 <div style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                  <strong>India (Pune)</strong><br />
+                  <strong style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><img src="/images/india.png" alt="" style={{ width: 28, height: 20, objectFit: 'cover', borderRadius: 2 }} />India (Pune)</strong><br />
                   K-Town, A1-802. Kiwale, Ravet.<br />
                   Pune, Pin code - 411020.<br />
-                  <strong>Phone:</strong> +91 9767644980<br />
-                  <strong>Email:</strong> info@ssglobetech.com / service@ssglobetech.com
+                  <strong>Phone:</strong> <a href="tel:+919767644980" className="contact-link">+91 9767644980</a><br />
+                  <strong>Email:</strong> <a href="mailto:info@ssglobetech.com" className="contact-link">info@ssglobetech.com</a> / <a href="mailto:service@ssglobetech.com" className="contact-link">service@ssglobetech.com</a><br />
+                  <a href="https://ssglobetech.com" target="_blank" rel="noopener noreferrer" className="contact-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.3rem' }}>
+                    <img src="/images/globe-icon.png" alt="Globe" style={{ width: 18, height: 18 }} />
+                    ssglobetech.com
+                  </a>
                 </div>
 
                 <div style={{ marginBottom: '1.5rem' }}>
