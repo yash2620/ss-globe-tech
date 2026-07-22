@@ -104,11 +104,11 @@ export default function Home() {
             <h2 style={{ color: 'var(--white)', fontSize: '2.2rem' }}>Our Global Network</h2>
             <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '2rem' }}>Connecting Businesses Across Continents</p>
             <div className="network-locations">
-              <span>India (Pune & Gujarat)</span><span className="dot">·</span>
-              <span>USA (California)</span><span className="dot">·</span>
-              <span>Australia (NSW)</span><span className="dot">·</span>
-              <span>Canada (Ontario)</span><span className="dot">·</span>
-              <span>Dubai (Sharjah)</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><img src="/images/india.png" alt="" style={{ width: 22, height: 16, objectFit: 'cover', borderRadius: 2 }} />India (Pune & Gujarat)</span><span className="dot">·</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><img src="/images/usa.png" alt="" style={{ width: 22, height: 16, objectFit: 'cover', borderRadius: 2 }} />USA (California)</span><span className="dot">·</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><img src="/images/australia.png" alt="" style={{ width: 22, height: 16, objectFit: 'cover', borderRadius: 2 }} />Australia (NSW)</span><span className="dot">·</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><img src="/images/canada.png" alt="" style={{ width: 22, height: 16, objectFit: 'cover', borderRadius: 2 }} />Canada (Ontario)</span><span className="dot">·</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><img src="/images/dubai.png" alt="" style={{ width: 22, height: 16, objectFit: 'cover', borderRadius: 2 }} />Dubai (Sharjah)</span>
             </div>
             <Link href="/network" className="btn-primary" style={{ marginTop: '1rem' }}>View Our Global Offices</Link>
           </ScrollAnimation>

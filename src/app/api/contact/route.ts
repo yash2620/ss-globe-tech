@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { getSupabaseClient } from '@/lib/supabase';
 import { sendContactEmail } from '@/lib/email';
 
 export async function POST(request: Request) {
@@ -14,30 +13,18 @@ export async function POST(request: Request) {
       );
     }
 
-    const supabase = getSupabaseClient();
-    const { data, error } = await supabase
-      .from('contact_submissions')
-      .insert([{ name, email, phone, subject, message }])
-      .select()
-      .single();
-
-    if (error) {
-      console.error('Supabase error:', error);
-      return NextResponse.json(
-        { error: 'Failed to save your message. Please try again.' },
-        { status: 500 }
-      );
-    }
-
-    // Send email notification — don't block response on failure
     try {
       await sendContactEmail({ name, email, phone, subject, message });
     } catch (emailErr) {
       console.error('Email send error:', emailErr);
+      return NextResponse.json(
+        { error: 'Failed to send your message. Please try again.' },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json(
-      { message: 'Thank you! Your message has been received.', data },
+      { message: 'Thank you! Your message has been received.' },
       { status: 201 }
     );
   } catch (error) {
