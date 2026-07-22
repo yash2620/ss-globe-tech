@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseClient } from '@/lib/supabase';
+import { sendContactEmail } from '@/lib/email';
 
 export async function POST(request: Request) {
   try {
@@ -26,6 +27,13 @@ export async function POST(request: Request) {
         { error: 'Failed to save your message. Please try again.' },
         { status: 500 }
       );
+    }
+
+    // Send email notification — don't block response on failure
+    try {
+      await sendContactEmail({ name, email, phone, subject, message });
+    } catch (emailErr) {
+      console.error('Email send error:', emailErr);
     }
 
     return NextResponse.json(
