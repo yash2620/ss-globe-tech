@@ -8,7 +8,7 @@ export async function sendContactEmail({
   name: string; email: string; phone?: string; subject?: string; message: string;
 }) {
   return resend.emails.send({
-    from: 'SS Globe Tech <onboarding@resend.dev>',
+    from: 'SS Globe Tech <noreply@ssglobetech.com>',
     to: ['info@ssglobetech.com'],
     replyTo: email,
     subject: `New Enquiry from ${name}${subject ? ` - ${subject}` : ''}`,
