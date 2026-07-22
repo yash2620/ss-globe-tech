@@ -35,24 +35,14 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activePath, setActivePath] = useState('');
 
   useEffect(() => {
     setActivePath(pathname);
   }, [pathname]);
 
-  useEffect(() => {
-    setScrolled(window.scrollY > 20);
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header className={`site-header ${scrolled ? 'solid' : 'transparent'}`}>
+    <header className="site-header solid">
       <div className="container header-inner">
         <Link href="/" className="header-logo">
           <img src="/images/ss-globe-tech-logo.png" alt="SS Globe Tech" className="logo-img" />

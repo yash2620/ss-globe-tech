@@ -3,14 +3,23 @@
 import { useState, FormEvent } from 'react';
 import ScrollAnimation from '@/components/ScrollAnimation';
 
-const SERVICE_OPTIONS = [
-  'Select a service',
-  'Engineering Services & Software Development',
-  'Engineering Products & Industrial Components',
+const PRODUCT_OPTIONS = [
+  'Forging & Machining',
+  'HPDC Auto Components',
+  'High Precision Shafts',
+  'Gray Cast Iron & Ductile Iron Components',
+  'Hardened & Ground Precision Parts',
+  'Industrial Material Handling',
   'Packaging Solutions',
-  'Import / Export Advisory',
-  'Global Logistics & Shipping',
-  'Other',
+  'Special Gauges, Fixtures & Leak Testing',
+  'Injection Molding Products & Moulds',
+  'Custom Design Products',
+];
+
+const SERVICE_OPTIONS = [
+  'Schematic Design Services',
+  'Technical Publication Services',
+  'Engineering GD & T, APQP & PPAP',
 ];
 
 export default function Contact() {
@@ -130,14 +139,17 @@ export default function Contact() {
 
                 <h2 className="text-gold" style={{ marginTop: '2rem' }}>Global Network</h2>
                 {[
-                  { name: 'USA (California)', addr: '10454, Sterling Blvd, Cupertino, CA 95014.' },
-                  { name: 'Australia (NSW)', addr: '30A Wolseley Street, Fairfield, NSW 2165.' },
-                  { name: 'Canada (Ontario)', addr: '1505-2910 Highway 7, Concord, Ontario L4K0H8.' },
-                  { name: 'Dubai (Sharjah)', addr: '244, Burj 2000 Damas building, Al Ghuwair, Sharjah.' },
-                  { name: 'India (Gujarat)', addr: 'Plot No - 906, BOL GIDC, Village - Bol, Tal - Sanand, Ahmedabad.' },
+                  { name: 'USA (California)', flag: '/images/usa.png', addr: '10454, Sterling Blvd, Cupertino, CA 95014.' },
+                  { name: 'Australia (NSW)', flag: '/images/australia.png', addr: '30A Wolseley Street, Fairfield, NSW 2165.' },
+                  { name: 'Canada (Ontario)', flag: '/images/canada.png', addr: '1505-2910 Highway 7, Concord, Ontario L4K0H8.' },
+                  { name: 'Dubai (Sharjah)', flag: '/images/dubai.png', addr: '244, Burj 2000 Damas building, Al Ghuwair, Sharjah.' },
+                  { name: 'India (Gujarat)', flag: '/images/india.png', addr: 'Plot No - 906, BOL GIDC, Village - Bol, Tal - Sanand, Ahmedabad.' },
                 ].map((loc) => (
                   <div key={loc.name} style={{ marginBottom: '0.8rem', lineHeight: '1.6' }}>
-                    <strong>{loc.name}</strong><br />
+                    <strong style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <img src={loc.flag} alt="" style={{ width: 28, height: 20, objectFit: 'cover', borderRadius: 2 }} />
+                      {loc.name}
+                    </strong><br />
                     <span style={{ color: 'var(--text-light)', fontSize: '0.9rem' }}>{loc.addr}</span>
                   </div>
                 ))}
@@ -198,9 +210,17 @@ export default function Contact() {
                           cursor: 'pointer',
                         }}
                       >
-                        {SERVICE_OPTIONS.map(opt => (
-                          <option key={opt} value={opt === 'Select a service' ? '' : opt}>{opt}</option>
-                        ))}
+                        <option value="">Select a service</option>
+                        <optgroup label="── PRODUCTS ──">
+                          {PRODUCT_OPTIONS.map(opt => (
+                            <option key={opt} value={opt}>{opt}</option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="── SERVICES ──">
+                          {SERVICE_OPTIONS.map(opt => (
+                            <option key={opt} value={opt}>{opt}</option>
+                          ))}
+                        </optgroup>
                       </select>
                     </div>
 

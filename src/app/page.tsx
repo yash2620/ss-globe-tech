@@ -5,52 +5,6 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="hero-overlay" />
-        <div className="container">
-          <div className="hero-content">
-            <ScrollAnimation>
-              <span className="hero-badge">Premier Merchant Exporter in India</span>
-              <h1 className="hero-title">
-                Precision <span className="highlight">.</span> Innovation <span className="highlight">.</span> Excellence
-              </h1>
-              <p className="hero-subtitle">
-                Passion for precision, driven by quality. Connecting international buyers with reliable Indian manufacturers for engineering products, industrial components, packaging solutions, and Engineering Services.
-              </p>
-              <div className="hero-actions">
-                <Link href="/products" className="btn-primary">Explore Products</Link>
-                <Link href="/contact" className="btn-outline">Get in Touch</Link>
-              </div>
-            </ScrollAnimation>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" style={{ padding: '3rem 0', background: 'var(--white)' }}>
-        <div className="container">
-          <div className="two-col" style={{ gap: '3rem' }}>
-            <ScrollAnimation className="col">
-              <div style={{ background: '#f0f2f8', padding: '2rem', borderRadius: 'var(--radius)', height: '100%' }}>
-                <h3 style={{ fontSize: '1.3rem', color: 'var(--secondary)', marginBottom: '1rem', letterSpacing: '2px' }}>OUR MISSION</h3>
-                <p style={{ lineHeight: '1.8', color: '#4b5563', fontSize: '0.95rem', fontStyle: 'italic' }}>
-                  "Our mission is to empower global industries by providing reliable engineering products, strategic sourcing solutions, and seamless export services with uncompromising quality and professionalism. Through innovation, technical expertise, and ethical business practices, we foster long-term partnerships, enhance supply chain excellence, and deliver sustainable value to customers across the world."
-                </p>
-              </div>
-            </ScrollAnimation>
-            <ScrollAnimation className="col">
-              <div style={{ background: '#f0f2f8', padding: '2rem', borderRadius: 'var(--radius)', height: '100%' }}>
-                <h3 style={{ fontSize: '1.3rem', color: 'var(--secondary)', marginBottom: '1rem', letterSpacing: '2px' }}>OUR VISION</h3>
-                <p style={{ lineHeight: '1.8', color: '#4b5563', fontSize: '0.95rem', fontStyle: 'italic' }}>
-                  "Our vision is to bridge global manufacturers and customers through trusted sourcing, precision engineering solutions, and seamless international trade. By embracing innovation, integrity, and operational excellence, we aim to become a benchmark for quality, reliability, and sustainable business growth in the global marketplace."
-                </p>
-              </div>
-            </ScrollAnimation>
-          </div>
-        </div>
-      </section>
-
-      <TrustBadges />
-
       <section className="section" style={{ background: '#f8f9fc' }}>
         <div className="container">
           <div className="two-col" style={{ alignItems: 'center', gap: '3rem' }}>
@@ -75,6 +29,41 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="section" style={{ padding: '4rem 0', background: 'linear-gradient(135deg, #f0f2f8 0%, #e8ecf5 100%)' }}>
+        <div className="container" style={{ maxWidth: '800px' }}>
+          <ScrollAnimation>
+            <div className="mv-stacked-card">
+              <div className="mv-stacked-img">
+                <img src="/images/Globe-1.png" alt="Our Mission" />
+              </div>
+              <div className="mv-stacked-body">
+                <span className="mv-stacked-badge">Our Mission</span>
+                <p className="mv-stacked-text">
+                  "Our mission is to empower global industries by providing reliable engineering products, strategic sourcing solutions, and seamless export services with uncompromising quality and professionalism. Through innovation, technical expertise, and ethical business practices, we foster long-term partnerships, enhance supply chain excellence, and deliver sustainable value to customers across the world."
+                </p>
+              </div>
+            </div>
+          </ScrollAnimation>
+          <div style={{ height: '2rem' }} />
+          <ScrollAnimation>
+            <div className="mv-stacked-card">
+              <div className="mv-stacked-img">
+                <img src="/images/globe-2.png" alt="Our Vision" />
+              </div>
+              <div className="mv-stacked-body">
+                <span className="mv-stacked-badge">Our Vision</span>
+                <p className="mv-stacked-text">
+                  "Our vision is to bridge global manufacturers and customers through trusted sourcing, precision engineering solutions, and seamless international trade. By embracing innovation, integrity, and operational excellence, we aim to become a benchmark for quality, reliability, and sustainable business growth in the global marketplace."
+                </p>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      <TrustBadges />
+
+
 
       <section className="section">
         <div className="container">
@@ -101,8 +90,10 @@ export default function Home() {
         <div className="container">
           <ScrollAnimation>
             <h2>Precision Engineering. Global Delivery.</h2>
-            <p style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>From forged components to Engineering Services — we deliver quality across industries and continents.</p>
-            <Link href="/products" className="btn-primary">Explore Our Products</Link>
+            <p style={{ maxWidth: '800px', margin: '0 auto 2rem', fontStyle: 'italic', fontSize: '1.15rem' }}>
+              "As a trusted engineering solutions provider, we deliver innovative products and value-added services with an unwavering commitment to quality, reliability, and operational excellence across global industries."
+            </p>
+            <Link href="/products" className="btn-primary">Explore Products</Link>
           </ScrollAnimation>
         </div>
       </section>
